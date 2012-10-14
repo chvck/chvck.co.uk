@@ -159,6 +159,79 @@ aside .tag-4 {
     font-size: 12px;
     font-size: normal;
 }
+
+.tag {
+    /* Some standard .tag settings: starting point */
+    float:right;
+    text-decoration:none;
+    padding: 1px 3px;
+
+    /* Rotation transformation */
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+
+    /* Transition between this and :hover state */
+    -webkit-transition: -webkit-transform 0.1s ease-in;
+    -moz-transition: -moz-transform 0.1s ease-in;
+    -o-transition: -o-transform 0.1s ease-in;
+    transition: transform 0.1s ease-in; 
+}
+
+.tag:hover {
+    color:#fff;
+    z-index:10000;
+
+    -webkit-transform: rotate(3deg) scale(1.2);
+    -moz-transform: rotate(3deg) scale(1.2);
+    -o-transform: rotate(3deg) scale(1.2);
+    transform: rotate(3deg) scale(1.2);
+}
+
+
+.tag:nth-child(2n) {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+
+.tag:nth-child(4n) {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+
+.tag:nth-child(5n) {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.tag:nth-child(2n):hover {
+    -webkit-transform: rotate(-3deg) scale(1.2);
+    -moz-transform: rotate(-3deg) scale(1.2);
+    -o-transform: rotate(-3deg) scale(1.2);
+    transform: rotate(-3deg) scale(1.2);
+}
+
+.tag:nth-child(4n):hover {
+    -webkit-transform: rotate(3deg) scale(1.2);
+    -moz-transform: rotate(3deg) scale(1.2);
+    -o-transform: rotate(3deg) scale(1.2);
+    transform: rotate(3deg) scale(1.2);
+}
+
+.tag:nth-child(5n):hover {
+    -webkit-transform: rotate(2deg) scale(1.2);
+    -moz-transform: rotate(2deg) scale(1.2);
+    -o-transform: rotate(2deg) scale(1.2);
+    transform: rotate(2deg) scale(1.2);
+}
+
 /* *** Comments Styles *** */
 
 #comments {

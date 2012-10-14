@@ -1,0 +1,192 @@
+* { margin: 0; padding: 0; }
+
+/* *** General Styles *** */
+
+body  {
+    background-color: grey;
+    text-align: center;
+}
+
+blockquote {
+    font-size: 14px;
+    font-style: italic;
+    padding: 5px 0 5px 30px;
+}
+
+img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    line-height: 1.6em;
+}
+
+ul.no-points {
+    list-style: none;
+}
+
+/* *** Layout *** */
+
+.container { 
+    text-align: left;
+    width: 780px;
+    background-color: white;
+} 
+
+header { 
+    height: 109px;
+    padding: 0 10px 0 20px;
+    background: url(../images/top.gif) no-repeat bottom;
+} 
+
+aside {
+    float: right;
+    padding: 20px 30px 10px 0;
+    text-align: right;
+    width: 150px; 
+}
+
+#mainContent {
+    padding: 20px 175px 10px 40px;
+} 
+
+footer { 
+    background: url(../images/bottom.gif) no-repeat;
+    font-size: 12px;
+    height: 70px;
+    padding: 0 10px 0 20px;
+} 
+
+/* *** Header Styles *** */
+
+header h1 {
+    font-size: 48px;
+    padding: 10px 0 0 15px;
+}
+
+header h2 {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 15px;
+}
+
+/* *** Top Menu Styles *** */
+/* *** Blog Styles *** */
+
+article {
+    padding: 20px 0 20px 0;
+}
+
+article span.label {
+    font-size: 18px;
+    vertical-align: inherit;
+}
+
+article.summary {
+    background: url(../images/hr.gif) top left no-repeat;
+    height: 120px;
+}
+
+article.summary:first-child {
+    background: none;
+    padding-top: 5px;
+}
+
+article h3 {
+    line-height: 21px;
+}
+
+
+article img.summary {
+    height: 120px;
+    width: 120px;
+    float: left;
+    margin-right: 15px;
+}
+
+/* *** Sidebar Styles *** */
+aside img.social {
+    height: 40px;
+    width: 40px;
+    border-style: none;
+}
+
+aside ul.socials {
+    padding-top: 20px;
+}
+
+aside ul.socials li {
+    display: inline;
+}
+
+aside ul {
+    line-height: 1.8em;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+aside .tag-0 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+aside .tag-1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+aside .tag-2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+aside .tag-3 {
+    font-size: 14px;
+    font-size: normal;
+}
+
+aside .tag-4 {
+    font-size: 12px;
+    font-size: normal;
+}
+/* *** Comments Styles *** */
+
+#comments {
+    margin: 20px 0 0 20px;
+}
+
+#comments li {
+    margin-bottom: 10px;
+}
+
+.commentSep {
+    background: url(../images/hr.gif) bottom left no-repeat;
+}
+
+/* *** Footer Styles *** */
+
+footer p {
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+.floatR {
+    float: right;
+    margin-left: 8px;
+}
+
+.floatL { 
+    float: left;
+    margin-right: 8px;
+}
+
+.clearfloat {
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}

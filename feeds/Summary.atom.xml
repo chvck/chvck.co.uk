@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="chvck.co.uk/" rel="alternate"></link><link href="chvck.co.uk/feeds/Summary.atom.xml" rel="self"></link><id>chvck.co.uk/</id><updated>2012-07-24T00:00:00+01:00</updated><entry><title>I'm not dead!</title><link href="chvck.co.uk/posts/2012/Jul/24/im-not-dead/" rel="alternate"></link><updated>2012-07-24T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2012-07-24:posts/2012/Jul/24/im-not-dead/</id><summary type="html">&lt;p&gt;Been a little while since I made any posts, about 3 weeks in fact - feels a lot longer I can tell you.
+May as well start at the beginning - the move. Well, actually there's not a lot to say on that front,
+it all went rather well really. Everything was packed and in the vehicles (Ben came to help with his van) by about 2pm
+I think. The drive itself was fine, no mishaps or owt. Upon arriving at the new house we pretty much just got everything
+out of the vehicles and dumped it all in the house before shooting into Oxford for some food. Sunday we went and rode
+Aston Hill, wow that place is slick in the wet! My brakes were still binding terribly so the push up was pretty damn
+unenjoyable though.&lt;/p&gt;
+&lt;p&gt;Anyway, 3.5 weeks on and the house is a bit more presentable and has a touch more furniture - we're still sleeping
+on a sofa bed though. We managed to get a book cake and a bureau from one of my work colleagues and just yesterday we picked
+up a small cupboard Maura spotted on freecycle. I have an office setup in the spare bedroom which is serving me well. (ha, we've just had a power cut
+as I type this) The cat appears to have settled in no problems and has tackled the great outdoors of the back yard.
+Not a lot else to say on this matter really.&lt;/p&gt;
+&lt;p&gt;So, what's happened in the time period since moving here? Actually, not really that much again. Seb got married the first
+weekend which was pretty cool and was fun! I've been on one road ride with Jimbo and will hopefully increase the frequency
+of the road rides by joining a local club called Zappi's. I went on the speed awareness course because I got caught speeding
+(might actually write a post about that...). Most of the time has just been spent working or sitting around really!
+But all is going well and hopefully Maura will find a job soon which will take the financial strain off!&lt;/p&gt;</summary><category term="random"></category></entry><entry><title>Week Summary</title><link href="chvck.co.uk/posts/2012/May/19/week-summary/" rel="alternate"></link><updated>2012-05-19T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2012-05-19:posts/2012/May/19/week-summary/</id><summary type="html">&lt;p&gt;In the past week I've managed to get out on the mountain bike 3 times which isn't bad really! On Sunday
+Ben and I drove to Rich's place after leaving the hotel from Seb's stag do. We spent quite a lot of time tinkering with
+bikes and for once we didn't have to tinker with mine! We headed to the Wyre Forest, somewhere that I'd not been before.
+After a bacon sandwich from the cafe we set off riding, this place reminded me quite a lot of Swinley Forest. The surface
+was quite sandy and I could hear my drivetrain grinding as we were riding round. It was quite an enjoyable little blast,
+none of the hills were particularly big but there were lots of short little descents and climbs which was quite fun. A few steep bits
+but for the most part it was just flat out with very little tech, which suited me having had a few beers the night before. Ben
+managed to have a pretty decent sized crash off the side of one of the trails that saw his bike go pinwheeling off down the
+side of the hill but he was OK. Pretty fun place, good singletrack! Once again we managed to resemble a Cotic fanclub as
+the image below shows!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://runkeeper.com/user/chvck/activity/87844010"&gt;http://runkeeper.com/user/chvck/activity/87844010&lt;/a&gt;
+&lt;img alt="Brace of Cotics" src="https://lh5.googleusercontent.com/-4y1gahqJ_Fc/T7diyQyMf-I/AAAAAAAABHU/cl2cw2CntEo/s400/IMG_20120513_131943.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;The other two rides I've done this week have both been up Nant-y-arian. Wednesday night I popped up with Andy and
+we did the usual Ystwyth loop, climbing up to Hippity Hop car park, doing the Summit loop and then back via White Fridge, my
+favourite loop! It was a pretty uneventful ride but, as ever, top fun. I played the no pedal game down most of the descents
+as I'm trying to develop my skills to gain speed from the trail and try to brake less. We managed to get round the 25km in just
+under 2 hours which we were pretty happy with, we didn't ride especially quick we just didn't take any breaks. The other ride we
+did on Friday night, again with Andy but this time with Tom too. We started at Hippity Hop and just did a standard Summit loop.
+For some reason this was a really, really fun ride. We took our time (16km in just over 2 hours) and just generally messed about.
+Following Andy really is great fun, he jumps off loads of little things and is very stylish to watch. Taking his lines and
+trying to do all the little jumps that he does is ace! That boy really is rather good on a bike. We had a bit of a mechanical
+midway up the leg burner when Tom's chain went bang but other than that it was fairly plain sailing.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://runkeeper.com/user/chvck/activity/88520763"&gt;http://runkeeper.com/user/chvck/activity/88520763&lt;/a&gt;
+&lt;a href="http://runkeeper.com/user/chvck/activity/88981583"&gt;http://runkeeper.com/user/chvck/activity/88981583&lt;/a&gt;
+&lt;img alt="Nant-y-arian viewpoint" src="https://lh6.googleusercontent.com/-jAxPNMnOOx8/T7di-TLRZfI/AAAAAAAABHc/TAeHUHXIPR0/s640/IMG_20120518_195035.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Also this week I've playing with nodejs for work. I'm pretty impressed, using the express framework I've managed to knock
+something together for our platform pretty quickly and easily! I'm also very much loving using javascript on both the back and
+front end. As a part of this I've also been learning to use Jade templates, this has meant no static pages and each page generated
+on the fly. This has also enabled me to do some pretty funky stuff although unfortunately can't really go into detail.
+I do have 1 tip for using couchdb. If you want to access it from anywhere that isn't localhost then you need to go into the
+local config file and change the bindings to 0.0.0.0 from 127.0.0.1, this may be a little less secure as it opens couchdb up to
+requests from any interface but it took me about 2 hours of trying to get a proxy to use work before finding that out! I also
+wound up using this nodejs proxy server that is pretty simple and works: &lt;a href="http://www.catonmat.net/http-proxy-in-nodejs/"&gt;http://www.catonmat.net/http-proxy-in-nodejs/&lt;/a&gt;&lt;/p&gt;</summary><category term="bikes"></category><category term="riding"></category><category term="nant-y-arian"></category><category term="javascript"></category></entry></feed>

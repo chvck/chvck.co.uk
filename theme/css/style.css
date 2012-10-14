@@ -108,6 +108,12 @@ article img.summary {
     margin-right: 15px;
 }
 
+.caption {
+    font-size: 10px;
+    margin: 0;
+}
+
+
 /* *** Sidebar Styles *** */
 aside img.social {
     height: 40px;

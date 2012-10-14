@@ -81,9 +81,18 @@ article {
     padding: 20px 0 20px 0;
 }
 
-article span.label {
+article .category span.label {
     font-size: 18px;
     vertical-align: inherit;
+}
+
+article a.category:hover {
+    text-decoration: none;
+}
+
+article .category span.label:hover {
+    color: #999;
+    background-color: transparent;
 }
 
 article.summary {

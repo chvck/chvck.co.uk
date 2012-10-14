@@ -177,7 +177,7 @@ aside .tag-4 {
     /* Some standard .tag settings: starting point */
     float:right;
     text-decoration:none;
-    padding: 1px 3px;
+    padding: 2px 4px;
 
     /* Rotation transformation */
     -webkit-transform: rotate(-2deg);

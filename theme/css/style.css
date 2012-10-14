@@ -110,7 +110,7 @@ article h3 {
     line-height: 21px;
 }
 
-article img {
+article.post img {
     max-width: 550px;
     margin-top: 10px;
 }

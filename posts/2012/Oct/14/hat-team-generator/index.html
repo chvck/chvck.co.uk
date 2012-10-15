@@ -7,7 +7,7 @@
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-  <title>Lyriks - travel reduction</title>
+  <title>Hat Team Generator</title>
   <link href="../../../../.././theme/css/reset.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="../../../../.././theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="../../../../.././theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -123,54 +123,58 @@
        
 
   <article class="post">
-    <h2><a href="../../../../.././posts/2012/Apr/19/lyriks-travel-reduction/">Lyriks - travel reduction</a></h2>
-    <h3>Posted on 19 Apr 2012</h3>
+    <h2><a href="../../../../.././posts/2012/Oct/14/hat-team-generator/">Hat Team Generator</a></h2>
+    <h3>Posted on 14 Oct 2012</h3>
         
-      <p>It recently occured to me that it might make my life a bit easier on xc rides if I
-was to drop the travel on the Lyriks (solo air) a tad - giving me a lower front end for the
-steep stuff. The first step here was to consider the options available, two options
-presented themselves to me. 1 - convert to coil uTurn, 2 - use Rock Shox all travel
-spacers. The second step was to decide what travel I wanted.</p>
-<p>Option 1 was by far the more preferable here, uTurn allows for on the fly adjustment meaning
-that I could easily wind the travel down when I wanted to and wind it back out for when I
-go to the alps. This also means that I could play with different amounts of travel until
-I got a length that I felt ideal. The major downside to this option is the price. If
-the parts are sourced new then a coil is £55, top out spring is £22, uTurn adjuster is
-£25 and a sleeve for the coil (precent scratching the insides of the stanchions) is £7.
-This puts the price of a conversion to over £100, quite a lot more than I was willing to pay,
-coil can be sourced second hand but the rest is quite tricky to source unless buying new.</p>
-<p>In the end I opted for option 2 - all travel spacers. After getting in touch with tftuned to
-make sure that these would work with my '08 Lyriks (they're labelled for models 2010 onward)
-I ordered a set for £12, if I was to do this again I'd just buy a hand ful of nylon washers.
-Much cheaper and does the same job. These spacers are fitted inside of the air cartridge.</p>
-<p>So forks in bits I started the job of taking the air cart apart. This is not a fun job,
-between the two ends of the circlip that holds the main body in the stanchion is a little tab.
-The first step is to push down on the base plate and turn it to move this tab out of the way.
-It rapidly became apparent that the circlip turns with the base plate, cue much swearing and
-pissing about. Eventually I got the circlip off and was presented with a totally different
-set of internals to the ones shown in the guide I was following (<a href="http://cdn.sram.com/cdn/farfuture/Iyagqzgz8FKPfRtQtkQ7kGP6DaHWJx6hmeiu3n9ZPTA/mtime:1302539000/sites/default/files/techdocs/tm_my102.pdf">2010 manual</a>).</p>
-<p>The major difference here is that the guide shows a negative air piston,
-in the 08 model this piston is not present. Instead there is a little gromit that seals onto
-the base plate to perform the same (or similar) job. This immediately made me question
-where I was supposed to place the spacer(s). After a bit of searching I located the 
-<a href="http://www.sram.com/_media/pdf/rockshox/dealers/TM_MY08_E.pdf">2008 manual</a>
-which showed me that I need to put the spacer above the bumper for the top piston.</p>
-<p><img src="../../../../../static/images/lyriks.png"></p>
-<p>Job done I put the forks back together (spending ages pissing about with that circlip again) and took
-the chance to refresh all the oil and lube any seals. It's really quite a simple process
-to change the travel and I now have fully working, fantastic feeling 140mm Lyriks!</p>	
+      <p>So the theory. Hat tournaments are tournaments where individuals join rather than teams, all players names are put
+into a hat and teams are formed randomly by taking names from the hat. This works fine for smaller tournaments
+where everyone knows each others abilities. Teams can be created pretty quickly and then players jiggled around
+to make sure that the teams are fair. When tournaments are bigger this isn't so easy. As I play frisbee this explanation
+is geared around it. Tournaments such as the Durham Hat and Duffa Hat request that all players provide a few bits of information
+such as cutting skill, handling skill, gender etc... I don't actually know but I assume that someone or a few people
+then sit down and create teams as fairly as possible.</p>
+<p>A couple of years ago Mwnci See (Aberystwyth Ultimate) hosted their 15 year reunion tournament, a hat tournament. The
+ committee approached me to see if I could write something to knock the teams together to save anyone having to sit
+ there and try work them out. Off the back of that I decided to improve the tool I created a bit and create a web app free
+ to all to use. So in the end I opted to implement both csv uploading and manual player adding methods, although manually
+ adding players would pretty unbearable so I'm not going to touch on that much. Once a csv is uploaded (or player added if
+ going manual) then all the players are populated in a big table, I used <a href="http://www.trirand.com/blog/">jqgrid</a> for this bit
+ as we use it at work so I know my way around it.</p>
+<p>Each cell is editable so names can be altered, numbers updated etc... Once all of the players are setup correctly it's time for the
+ bit that matters. Assigning each column a weight so that attributes can be geared toward how the user wants. If the decides
+ that handling makes for a "better" player then they can weight that attribute higher than any others. Using my example csv
+ the attributes available are cutting, handling, years since playing and experience. So if I wanted to created teams
+ where the cutting and handling abilities are balanced but amplified, the experience taken into account and the years since playing acting
+ as a negative thing then I could create an equation of:</p>
+<div class="codehilite"><pre><span class="p">(</span><span class="n">Handling</span> <span class="o">*</span> 2<span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">Experience</span> <span class="o">*</span> 1<span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">Cutting</span> <span class="o">*</span> 2<span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">Years</span> <span class="n">Since</span> <span class="n">Playing</span> <span class="o">*</span> <span class="o">-</span>1<span class="p">)</span>
+</pre></div>
+
+
+<p>Once I've created my team generating formula I'd need to set the number of teams and whether or not I'd want to balance genders.
+ Once done I hit generate and I get back a csv of balanced teams. The way that the balancing works is that each player has the
+ formula provided applied to their attributes and they're given a rating, better players will have a higher rating using my
+ formula. The list of players is then sorted into a list with the highest rated players at the top. The teams are then created
+ as empty lists and the team list is iterated over giving each team a player using a weighted random selector that weights toward the start of
+ the players list. This goes on until all players are assigned to a team, this is done for both males and females separately if
+ balance genders was selected.</p>
+<p>So the technical bit. The javascript involved in this is all pretty straight forward, just standard jquery stuff really. One
+ new thing that I discovered was jquery forms that allow you to submit a http form to your server using a get request. My reasoning
+ for doing this is that I didn't want to do a page refresh and have to reload the csv into the grid, I wanted it to be as
+ seamless as possible.</p>	
       
   <a href="http://twitter.com/share" class="twitter-share-button"
      data-count="horizontal" data-via="chvck">Tweet</a>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
         
-      <h3 class="blogMeta">Posted in: <a href="../../../../.././category/fettling.html">Fettling</a>
+      <h3 class="blogMeta">Posted in: <a href="../../../../.././category/dev.html">Dev</a>
         | Tags :
          
-           <span><a href="../../../../.././tag/bikes.html">bikes</a> / </span>
+           <span><a href="../../../../.././tag/javascript.html">javascript</a> / </span>
          
-           <span><a href="../../../../.././tag/bike-maintenance.html">bike-maintenance</a> / </span>
+           <span><a href="../../../../.././tag/python.html">python</a> / </span>
+         
+           <span><a href="../../../../.././tag/webdev.html">webdev</a> / </span>
          
       </h3>
       
@@ -182,7 +186,7 @@ to change the travel and I now have fully working, fantastic feeling 140mm Lyrik
     <h2>Comments</h2>
     <div id="disqus_thread"></div>
       <script type="text/javascript">
-         var disqus_identifier = "posts/2012/Apr/19/lyriks-travel-reduction/";
+         var disqus_identifier = "posts/2012/Oct/14/hat-team-generator/";
          (function () {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://chvck.disqus.com/embed.js';

@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="chvck.co.uk/" rel="alternate"></link><link href="chvck.co.uk/feeds/all.atom.xml" rel="self"></link><id>chvck.co.uk/</id><updated>2012-10-14T00:00:00+01:00</updated><entry><title>Hat Team Generator</title><link href="chvck.co.uk/posts/2012/Oct/14/hat-team-generator/" rel="alternate"></link><updated>2012-10-14T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2012-10-14:posts/2012/Oct/14/hat-team-generator/</id><summary type="html">&lt;p&gt;So the theory. Hat tournaments are tournaments where individuals join rather than teams, all players names are put
-into a hat and teams are formed randomly by taking names from the hat. This works fine for smaller tournaments
-where everyone knows each others abilities. Teams can be created pretty quickly and then players jiggled around
-to make sure that the teams are fair. When tournaments are bigger this isn't so easy. As I play frisbee this explanation
-is geared around it. Tournaments such as the Durham Hat and Duffa Hat request that all players provide a few bits of information
-such as cutting skill, handling skill, gender etc... I don't actually know but I assume that someone or a few people
-then sit down and create teams as fairly as possible.&lt;/p&gt;
-&lt;p&gt;A couple of years ago Mwnci See (Aberystwyth Ultimate) hosted their 15 year reunion tournament, a hat tournament. The
- committee approached me to see if I could write something to knock the teams together to save anyone having to sit
- there and try work them out. Off the back of that I decided to improve the tool I created a bit and create a web app free
- to all to use. So in the end I opted to implement both csv uploading and manual player adding methods, although manually
- adding players would pretty unbearable so I'm not going to touch on that much. Once a csv is uploaded (or player added if
- going manual) then all the players are populated in a big table, I used &lt;a href="http://www.trirand.com/blog/"&gt;jqgrid&lt;/a&gt; for this bit
- as we use it at work so I know my way around it.&lt;/p&gt;
-&lt;p&gt;Each cell is editable so names can be altered, numbers updated etc... Once all of the players are setup correctly it's time for the
- bit that matters. Assigning each column a weight so that attributes can be geared toward how the user wants. If the decides
- that handling makes for a "better" player then they can weight that attribute higher than any others. Using my example csv
- the attributes available are cutting, handling, years since playing and experience. So if I wanted to created teams
- where the cutting and handling abilities are balanced but amplified, the experience taken into account and the years since playing acting
- as a negative thing then I could create an equation of:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Handling&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 2&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Experience&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 1&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Cutting&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 2&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Years&lt;/span&gt; &lt;span class="n"&gt;Since&lt;/span&gt; &lt;span class="n"&gt;Playing&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;1&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Once I've created my team generating formula I'd need to set the number of teams and whether or not I'd want to balance genders.
- Once done I hit generate and I get back a csv of balanced teams. The way that the balancing works is that each player has the
- formula provided applied to their attributes and they're given a rating, better players will have a higher rating using my
- formula. The list of players is then sorted into a list with the highest rated players at the top. The teams are then created
- as empty lists and the team list is iterated over giving each team a player using a weighted random selector that weights toward the start of
- the players list. This goes on until all players are assigned to a team, this is done for both males and females separately if
- balance genders was selected.&lt;/p&gt;
-&lt;p&gt;So the technical bit. The javascript involved in this is all pretty straight forward, just standard jquery stuff really. One
- new thing that I discovered was jquery forms that allow you to submit a http form to your server using a get request. My reasoning
- for doing this is that I didn't want to do a page refresh and have to reload the csv into the grid, I wanted it to be as
- seamless as possible.&lt;/p&gt;</summary><category term="javascript"></category><category term="python"></category><category term="webdev"></category></entry><entry><title>Coed-y-brenin Enduro 2012</title><link href="chvck.co.uk/posts/2012/Oct/13/coed-y-brenin-enduro-2012/" rel="alternate"></link><updated>2012-10-13T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2012-10-13:posts/2012/Oct/13/coed-y-brenin-enduro-2012/</id><summary type="html">&lt;p&gt;So, Friday I hitched a lift up to Coedy with Jimbo and Richard (who I hadn't met before) to meet up with Ben,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="chvck.co.uk/" rel="alternate"></link><link href="chvck.co.uk/feeds/all.atom.xml" rel="self"></link><id>chvck.co.uk/</id><updated>2012-10-13T00:00:00+01:00</updated><entry><title>Coed-y-brenin Enduro 2012</title><link href="chvck.co.uk/posts/2012/Oct/13/coed-y-brenin-enduro-2012/" rel="alternate"></link><updated>2012-10-13T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2012-10-13:posts/2012/Oct/13/coed-y-brenin-enduro-2012/</id><summary type="html">&lt;p&gt;So, Friday I hitched a lift up to Coedy with Jimbo and Richard (who I hadn't met before) to meet up with Ben,
 Jimbo and Richard were staying in a nearby B&amp;amp;B but I opted for the cheaper option of Bens van. The drive up went well
 and traffic was good, once in Dolgellau Ben and I grabbed some food at a pub which was also pretty good! We headed
  back to the campsite and it was pretty dead so we just grabbed a couple of beers before heading to sleep. 

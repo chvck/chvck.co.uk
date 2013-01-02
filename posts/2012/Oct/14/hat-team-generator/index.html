@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta name="description" content="Personal blog site for chvck covering a range of topics but mostly bikes. chvck likes bikes." />
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Hat Team Generator</title>
+  <link href="../../../../.././theme/css/reset.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../../../.././theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../../../.././theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  
+    <link href="../../../../.././feeds/all.rss" type="application/rss+xml" rel="alternate" title="chvck.co.uk RSS Feed" />
+  
+    
+  <!--[if IE]>
+    <style type="text/css"> 
+    . twoColFixRtHdr #mainContent { zoom: 1; }
+    </style>
+  <![endif]-->
+
+</head>
+
+<body>
+  <div class="container">
+  
+    <header>
+      <h1><a href="../../../../../.">chvck.co.uk</a></h1>
+      <h2>Pointless, sometimes amusing and deeply, deeply uninteresting to 99.72998% of the population</h2>
+    </header>
+
+    <nav>
+    </nav>
+
+    <aside>
+      <a href="../../../../.././categories.html"><h3>Categories</h3></a>
+        <ul>
+          
+            <li><a href="../../../../.././category/dev.html">Dev</a></li>
+          
+            <li><a href="../../../../.././category/fettling.html">Fettling</a></li>
+          
+            <li><a href="../../../../.././category/random.html">Random</a></li>
+          
+            <li><a href="../../../../.././category/riding.html">Riding</a></li>
+          
+            <li><a href="../../../../.././category/summary.html">Summary</a></li>
+          
+          
+        </ul>
+
+      
+        <h3>Links</h3>
+        <ul>
+          
+            <li><a href="http://docs.notmyidea.org/alexis/pelican/">Pelican</a></li>
+          
+            <li><a href="http://jinja.pocoo.org">Jinja2</a></li>
+          
+            <li><a href="http://hatteamcreator.co.uk/">Hat Team Creator</a></li>
+          
+            <li><a href="http://27smiles.com">27 Smiles</a></li>
+          
+            <li><a href="http://ghickman.co.uk">ghickman.co.uk</a></li>
+          
+        </ul>
+      
+
+        <a href="../../../../.././tags.html"><h3>Tags</h3></a>
+        <ul>
+          
+              <li class="tag tag-4"><a href="/tag/boozing.html">boozing</a></li>
+          
+              <li class="tag tag-1"><a href="/tag/bikes.html">bikes</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/trails.html">trails</a></li>
+          
+              <li class="tag tag-3"><a href="/tag/random.html">random</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/alps.html">alps</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/python.html">python</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/dyfi.html">dyfi</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/clarach.html">clarach</a></li>
+          
+              <li class="tag tag-2"><a href="/tag/nant-y-arian.html">nant-y-arian</a></li>
+          
+              <li class="tag tag-3"><a href="/tag/javascript.html">javascript</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/bike-maintenance.html">bike-maintenance</a></li>
+          
+              <li class="tag tag-1"><a href="/tag/riding.html">riding</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/webdev.html">webdev</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/eastridge.html">eastridge</a></li>
+          
+              <li class="tag tag-4"><a href="/tag/wales.html">wales</a></li>
+          
+        </ul>
+        <br style="clear: both"/>
+        
+        <ul class="socials">
+          
+                <li><a href="http://www.twitter.com/chvck"><img class="social" src="../../../../.././theme/images/twitter.png" alt="Twitter" ></a></li>
+          
+          
+                <li><a href="https://github.com/chvck"><img class="social" src="../../../../.././theme/images/github.png" alt="Github" ></a></li>
+          
+        </ul>
+
+    </aside><!-- end #sidebar -->
+  
+    <div id="mainContent">
+      
+      
+      
+      
+       
+
+  <article class="post">
+    <h2><a href="../../../../.././posts/2012/Oct/14/hat-team-generator/">Hat Team Generator</a></h2>
+    <h3>Posted on 14 Oct 2012</h3>
+        
+      <p>So the theory. Hat tournaments are tournaments where individuals join rather than teams, all players names are put
+into a hat and teams are formed randomly by taking names from the hat. This works fine for smaller tournaments
+where everyone knows each others abilities. Teams can be created pretty quickly and then players jiggled around
+to make sure that the teams are fair. When tournaments are bigger this isn't so easy. As I play frisbee this explanation
+is geared around it. Tournaments such as the Durham Hat and Duffa Hat request that all players provide a few bits of information
+such as cutting skill, handling skill, gender etc... I don't actually know but I assume that someone or a few people
+then sit down and create teams as fairly as possible.</p>
+<p>A couple of years ago Mwnci See (Aberystwyth Ultimate) hosted their 15 year reunion tournament, a hat tournament. The
+ committee approached me to see if I could write something to knock the teams together to save anyone having to sit
+ there and try work them out. Off the back of that I decided to improve the tool I created a bit and create a web app free
+ to all to use. So in the end I opted to implement both csv uploading and manual player adding methods, although manually
+ adding players would pretty unbearable so I'm not going to touch on that much. Once a csv is uploaded (or player added if
+ going manual) then all the players are populated in a big table, I used <a href="http://www.trirand.com/blog/">jqgrid</a> for this bit
+ as we use it at work so I know my way around it.</p>
+<p>Each cell is editable so names can be altered, numbers updated etc... Once all of the players are setup correctly it's time for the
+ bit that matters. Assigning each column a weight so that attributes can be geared toward how the user wants. If the decides
+ that handling makes for a "better" player then they can weight that attribute higher than any others. Using my example csv
+ the attributes available are cutting, handling, years since playing and experience. So if I wanted to created teams
+ where the cutting and handling abilities are balanced but amplified, the experience taken into account and the years since playing acting
+ as a negative thing then I could create an equation of:</p>
+<div class="codehilite"><pre><span class="p">(</span><span class="n">Handling</span> <span class="o">*</span> 2<span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">Experience</span> <span class="o">*</span> 1<span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">Cutting</span> <span class="o">*</span> 2<span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">Years</span> <span class="n">Since</span> <span class="n">Playing</span> <span class="o">*</span> <span class="o">-</span>1<span class="p">)</span>
+</pre></div>
+
+
+<p>Once I've created my team generating formula I'd need to set the number of teams and whether or not I'd want to balance genders.
+ Once done I hit generate and I get back a csv of balanced teams. The way that the balancing works is that each player has the
+ formula provided applied to their attributes and they're given a rating, better players will have a higher rating using my
+ formula. The list of players is then sorted into a list with the highest rated players at the top. The teams are then created
+ as empty lists and the team list is iterated over giving each team a player using a weighted random selector that weights toward the start of
+ the players list. This goes on until all players are assigned to a team, this is done for both males and females separately if
+ balance genders was selected.</p>
+<p>So the technical bit. The javascript involved in this is all pretty straight forward, just standard jquery stuff really. One
+ new thing that I discovered was jquery forms that allow you to submit a http form to your server using a get request. My reasoning
+ for doing this is that I didn't want to do a page refresh and have to reload the csv into the grid, I wanted it to be as
+ seamless as possible.</p>	
+      
+  <a href="http://twitter.com/share" class="twitter-share-button"
+     data-count="horizontal" data-via="chvck">Tweet</a>
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+        
+      <h3 class="blogMeta">Posted in: <a href="../../../../.././category/dev.html">Dev</a>
+        | Tags :
+         
+           <span><a href="../../../../.././tag/javascript.html">javascript</a> / </span>
+         
+           <span><a href="../../../../.././tag/python.html">python</a> / </span>
+         
+           <span><a href="../../../../.././tag/webdev.html">webdev</a> / </span>
+         
+      </h3>
+      
+  </article>
+  
+  
+    <article>
+        
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+      <script type="text/javascript">
+         var disqus_identifier = "posts/2012/Oct/14/hat-team-generator/";
+         (function () {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://chvck.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      
+    </article>
+  
+				
+
+    
+    </div><!-- end #mainContent -->
+  
+  <div class="clearfloat"></div>
+  
+    <footer>
+      <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+    </footer><!-- end #footer -->
+  
+  </div><!-- end #container -->
+</body>
+</html>

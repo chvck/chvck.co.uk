@@ -123,6 +123,10 @@ article img.summary {
     margin-right: 15px;
 }
 
+#article-summary img {
+    display: none;
+}
+
 .caption {
     font-size: 10px;
     margin: 0;

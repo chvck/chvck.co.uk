@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>chvck.co.uk</title><link>chvck.co.uk/</link><description>Pointless, sometimes amusing and deeply, deeply uninteresting to 99.72998% of the population</description><atom:link href="chvck.co.uk/feeds/all.rss" rel="self"></atom:link><lastBuildDate>Fri, 15 Mar 2013 00:00:00 +0000</lastBuildDate><item><title>Scoopfree Litter Tray</title><link>chvck.co.uk/posts/2013/Mar/15/scoopfree-litter-tray/</link><description>&lt;p&gt;This is a bit off the beaten path of bike related things that I usually write about. 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>chvck.co.uk</title><link>chvck.co.uk/</link><description>Pointless, sometimes amusing and deeply, deeply uninteresting to 99.72998% of the population</description><atom:link href="chvck.co.uk/feeds/all.rss" rel="self"></atom:link><lastBuildDate>Sun, 17 Mar 2013 00:00:00 +0000</lastBuildDate><item><title>Hat Tournament Creator</title><link>chvck.co.uk/posts/2013/Mar/17/hat-tournament-creator/</link><description>&lt;p&gt;I've been meaning to write something about this for a little while now and 2 days ago
+I received an email from a tournament organizer in the states so that's prompted me to do this.
+He'd found my code on github and wanted to know how to go about running it, well it just so
+happens that I actually have it hosted at &lt;a href="http://www.hattournamentcreator.co.uk/"&gt;http://www.hattournamentcreator.co.uk/&lt;/a&gt;
+so I just pointed him at that. I got another email saying that it did what he wanted and that he'll pass the word
+on to other organizer. I'm pretty happy that it's helped out at least 2 people in the world now! If it's helping even
+a small number of people then it's worth it for me.&lt;/p&gt;
+&lt;p&gt;So, how it works. First, I'll explain the UI and then a little bit about the back end (at a high level). 
+The site allows you to select manual or csv entry, along with an example csv to try to help people out a bit.
+Manual entry is frankly crazy as it'd take ages to add any reasonable number of players, I also haven't
+tested it as well as I've tested the csv stuff. Anyway, we've selected our csv file (which we already have as we
+have to keep a record of players anyway...) and we hit upload. The site then loads all that player data in a big
+grid. You can edit players in the grid to change names, metrics, etc... in case of any mistakes. The grid is 
+pretty flexible and you can reorder the columns and set the sort order on any of them. You've got your players all setup
+so now we need to setup the metrics. This is the important bit, this is how the app will assign points
+to players. Each attribute that defines a players skill is given a multiplication factor. Stolen from the site itself:
+For example if I was doing this for Ultimate Frisbee then I'd maybe give Cutting a value of 2 and Handling a value of 2 then I'd hit generate formula. 
+This'd give me (Cutting * 2) + (Handling * 2).&lt;/p&gt;
+&lt;p&gt;So Bob who has 3 cutting and 4 handling gets 14 points but Dave who has 1 and 2 respectively gets only 6. At this point we also
+need to define how many teams we want creating and whether or not to balance the genders so that all teams
+have the same number of girls and the same number of guys. We hit Generate teams, some magic occurs and we get a csv back
+that has all of our teams set up for us :). A little example - using the example csv on the website. This example has 4 skill
+attributes: cutting, handling, years since playing and years of experience. Years since playing is a negative skill as people get
+rusty as the years go by and they haven't played... so I'm going to give that a value of -1. It's not a hugely important attribute
+but I want it taken into consideration. I give years of experience 2, it's not that important - I mean you can have played for 10 years
+and be rubbish but experience does mean that you know how to react to given situations. Cutting and handling are the big guns,
+I'm going to give them 4 each as I feel that they're equally important as one another. 
+The point generation formula that I get is: &lt;/p&gt;
+&lt;p&gt;(Handling * 4) + (Experience * 1) + (Cutting * 4) + (Years Since Playing * -1) &lt;/p&gt;
+&lt;p&gt;That looks fine to me. I'm going to have 6 teams in this tournament and I want to balance the genders too. 
+I hit generate and get my teams back. The teams file also includes a few little extras like the average points
+per player for each team. In this example my averages per team are: 16.95, 17.9, 17.4, 18.35, 19.63 and 20.52. That's not 
+a huge variance and should make the teams pretty even making for a fun tournament. I feel a bit sorry for Name 68 who has been assigned
+-4 points, that's gotta sting! As the player data for this example was literally random numbers (I wrote a script to generate it) I'd expect
+real world data to give closer points per team.&lt;/p&gt;
+&lt;p&gt;Onto how this thing actually works then. The grid is just &lt;a href="http://www.trirand.com/blog/"&gt;jqgrid&lt;/a&gt; which, tbh, I don't recommend.
+When I get round to it I'll rewrite it to use &lt;a href="http://www.datatables.net/"&gt;datatables&lt;/a&gt;, although I haven't actually tried it yet 
+so it could be rubbish! Jqgrid does all the work for the grid stuff so I won't cover that. The algorithm for the team creation is the meat 
+so let's talk about that. In my opinion I've used a pretty naive approach and it's probably not the most
+optimal way to do it but it works, which is the important bit here. Just to mention, this site uses python and a load of javascript.
+The team creation stuff is all in python. My javascript skills are much strong but I like to keep dipping into python just to remember
+how it works! Anyway. First we deal with our metrics, we create a dictionary of the attributes that actually map to skills - 
+just cast the value to a float and if it's 0 and doesn't throw an exception we class it as a skill! Next up is sorting out the gender stuff,
+just determining which gender format is used really. &lt;/p&gt;
+&lt;p&gt;Onto some of the fun stuff then, the next step is to iterate over every player and work out their points value before adding
+the player to the relevant gender array (we need to balance them remember). We quick sort each array so that the highest ranked
+players are nearest the "top" (index 0). The next step is to split the array(s) of players into equal sized lists (plus one for
+the players that don't fit into the equal lists). The reason for this will become clear now, this effectively means that we have several
+lists and each list contains similar skilled players. We now do the actual "teaming". We iterate over our new lists of players one by one. For each
+list we generate an index using a weighted random (the weight is linked to how many points the team has, the random is just to add a bit of variance) and then remove the player at that
+index and add them to the current selected team. We do this until we've run out of players and then we create and serve the file up.&lt;/p&gt;
+&lt;p&gt;It's quite hard to explain and the easiest way to see how the algorithm works is to just look at, it's kinda commented!
+You can find the code at &lt;a href="https://github.com/chvck/Hat-Team-Generator"&gt;https://github.com/chvck/Hat-Team-Generator&lt;/a&gt; and main.py and utils.py are the
+key files for this stuff. At this point I should probably actually mention why this app was created! A couple of years ago I played
+Ultimate Frisbee at Aberystwyth University and the club had its 15th year anniversary. To celebrate this they put on a hat tournament and I
+was approached to see if I could make something to create the teams so that the committee didn't have to do it manually. The result
+was this web app. Oh, the team I was on also won! No, I didn't fix it either!  &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">chuck</dc:creator><pubDate>Sun, 17 Mar 2013 00:00:00 +0000</pubDate><guid>tag:chvck.co.uk,2013-03-17:posts/2013/Mar/17/hat-tournament-creator/</guid><category>dev</category></item><item><title>Scoopfree Litter Tray</title><link>chvck.co.uk/posts/2013/Mar/15/scoopfree-litter-tray/</link><description>&lt;p&gt;This is a bit off the beaten path of bike related things that I usually write about. 
 This post is about a cat litter tray system called &lt;a href="http://www.scoopfree.com/"&gt;Scoopfree&lt;/a&gt;, it's
 one of those things that actually makes a difference. As the name suggests there's no scooping
 cat poo with this machine, you simply insert a cartridge and off you go until it's time

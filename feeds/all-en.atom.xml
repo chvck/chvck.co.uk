@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="chvck.co.uk/" rel="alternate"></link><link href="chvck.co.uk/feeds/all-en.atom.xml" rel="self"></link><id>chvck.co.uk/</id><updated>2013-04-14T00:00:00+01:00</updated><entry><title>Pro Ride Guides Airtime Course</title><link href="chvck.co.uk/posts/2013/Apr/14/pro-ride-guides-airtime-course/" rel="alternate"></link><updated>2013-04-14T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-04-14:posts/2013/Apr/14/pro-ride-guides-airtime-course/</id><summary type="html">&lt;p&gt;A while back Ben and I decided that a skills course could be a good idea. 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="chvck.co.uk/" rel="alternate"></link><link href="chvck.co.uk/feeds/all-en.atom.xml" rel="self"></link><id>chvck.co.uk/</id><updated>2013-04-20T00:00:00+01:00</updated><entry><title>JQuery Hackday</title><link href="chvck.co.uk/posts/2013/Apr/20/jquery-hackday/" rel="alternate"></link><updated>2013-04-20T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-04-20:posts/2013/Apr/20/jquery-hackday/</id><summary type="html">&lt;p&gt;Yesterday marked the &lt;a href="http://events.jquery.org/2013/uk/"&gt;Jquery UK&lt;/a&gt; conference 
+which was hosted by &lt;a href="http://www.whiteoctober.co.uk/"&gt;White October&lt;/a&gt; in Oxford.
+Unfortunately I didn't go to the conference but today they also hosted a hackday
+along with &lt;a href="http://jsoxford.com/"&gt;JS Oxford&lt;/a&gt; which I did make it to! The idea for the 
+hackday was to have remote control cars that we could control from our laptops, phones etc...
+but also control using javascript run under nodejs.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The car" src="https://lh5.googleusercontent.com/-43up7VqMoro/UXQmzkJGetI/AAAAAAAACMA/YdxAlpSadaw/s640/IMG_20130420_114428.jpg" /&gt;
+&lt;p class="caption"&gt;The car!&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;I arrived at about 8.45 and by 9 was sat on a table with 2 others and starting to hack.
+I'd already managed to install something called &lt;a href="https://github.com/chrisjameskirkham/libkoki"&gt;libkoki&lt;/a&gt; which we used for some machine 
+vision stuff but unfortunately had the wrong version of node installed to build the node 
+bindings for it that the White October guys had written for us. 2 versions of node later
+and I had it working along with being able to run code on the car, pretty exciting stuff!&lt;/p&gt;
+&lt;p&gt;I was on a team with 3 others - Sunil, Phil and Toby. We were using the Blackberry sponsored
+car for the day. There were no real restrictions on what
+we could do with the day and with the cars although there was mention of a race at the end
+of the day. As we all had the koki stuff working we decided that we'd try to navigate around 
+the race track using that, going from marker to marker. Libkoki is a library used in
+&lt;a href="https://www.studentrobotics.org/"&gt;student robotics&lt;/a&gt; competitions. The idea behind it is that
+there are a number of markers that the library can detect and extract some static and some
+dynamic information from using a live camera feed. The markers provide information such
+as which number in a series it is as well as distance from the camera, rotation etc....&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Koki marker" src="https://lh4.googleusercontent.com/-jTCkMUftkDY/UXQm_VoSD3I/AAAAAAAACMQ/t_zHFV6-t0Y/s640/IMG_20130420_155934.jpg" /&gt;
+&lt;p class="caption"&gt;One of the koki markers&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The track" src="https://lh6.googleusercontent.com/-lf6sZbv3bCA/UXQnC1hCpJI/AAAAAAAACMY/voDDL5gGjVw/s640/IMG_20130420_155940.jpg" /&gt;
+&lt;p class="caption"&gt;The track&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;The koki markers on the inside of the track were even numbered ones and on the outside odd.
+We decided to use a pretty simple approach of just turning anti-clockwise when we detected and
+got close to an even marker, and the opposite with an odd marker. I had tried to write a bit of logic
+to avoid hitting walls by using the angle of the car to the marker to work out the distance
+to the wall that the marker was on. I have a feeling that the value that I was using from the marker information
+wasn't actually the angle that I thought it was and this approach was never going to work if we didn't
+have a marker in sight anyway! &lt;/p&gt;
+&lt;p&gt;Now, in my masters I did quite a lot of work navigating a maze with a rover but for that
+I used sonar. Whilst the sonar that I used back then was quite noisy it was still
+remarkably easier than using a live camera feed! If your vehicle is sat in front of a wall
+that's 20cm away then that's pretty easy to tell with sonar, not so much with a camera. Whilst
+we did have koki at our disposal that only worked if a marker was in sight, which 20cm from a wall
+quite often is not the case. I was pretty shocked by just how hard dealing with no
+extra information such as that given by sonar was, certainly made it interesting.&lt;/p&gt;
+&lt;p&gt;Anyway, over the day our approach slowly developed (and our car hit many, many walls - they were
+only made from cardboard, luckily) and by the end we were bouncing between markers and working
+round the track relatively well, I think that we even managed half the track at one point.
+By the end of the day there was only one other team left and they had used an approach
+of edge detection on the tops of the walls. Their car was quite good at navigating some bits
+but not so good at other sections. In the end there was a race but the cars were controlled by
+people on phones instead!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Ready to race" src="https://lh3.googleusercontent.com/-ccsEq-JeHog/UXQnFYc9n7I/AAAAAAAACMg/4unBSqrpNC0/s640/IMG_20130420_174409.jpg" /&gt;
+&lt;p class="caption"&gt;Ready to race&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Race is on" src="https://lh4.googleusercontent.com/-Gw_dWX68fqs/UXQnIGPDziI/AAAAAAAACMo/t5XYsXUyF-Q/s640/IMG_20130420_174533.jpg" /&gt;
+&lt;p class="caption"&gt;The race is on&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pile up" src="https://lh4.googleusercontent.com/-4CbEkkRq3Hc/UXQnLRPW5zI/AAAAAAAACMw/hgQ6DCOkkjk/s640/IMG_20130420_174549.jpg" /&gt;
+&lt;p class="caption"&gt;That dent in the wall wasn't there before...&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Chicane" src="https://lh3.googleusercontent.com/-_7AM3DXWsuk/UXQnVG_CncI/AAAAAAAACM4/8YkZw01etMo/s640/IMG_20130420_174744.jpg" /&gt;
+&lt;p class="caption"&gt;The chicane&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;It was an excellent day and I had a lot of fun. If they ever put on another then I'll
+definitely try to be there. Big thanks to the guys who set it all up so that we could
+do what we did.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Beer" src="https://lh5.googleusercontent.com/-06s1vCzv1XE/UXQm9Ip0NOI/AAAAAAAACMI/j4uguzksdnc/s640/IMG_20130420_155109.jpg" /&gt;
+&lt;p class="caption"&gt;Can't go wrong with free beer&lt;/p&gt;&lt;/p&gt;</summary><category term="dev"></category><category term="hackday"></category></entry><entry><title>Pro Ride Guides Airtime Course</title><link href="chvck.co.uk/posts/2013/Apr/14/pro-ride-guides-airtime-course/" rel="alternate"></link><updated>2013-04-14T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-04-14:posts/2013/Apr/14/pro-ride-guides-airtime-course/</id><summary type="html">&lt;p&gt;A while back Ben and I decided that a skills course could be a good idea. 
 He found a jumps and drops course at Forest of Dean that is run by
 &lt;a href="http://prorideguides.com/"&gt;Pro Ride Guides&lt;/a&gt;. We found a date and sent the info
 on the others, it ended up being Ben, Taylor and myself booked onto the course.

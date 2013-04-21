@@ -7,7 +7,7 @@
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-  <title>Photo a day 18th Jan</title>
+  <title>JQuery Hackday</title>
   <link href="chvck.co.uk/theme/css/reset.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="chvck.co.uk/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="chvck.co.uk/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -95,21 +95,77 @@
        
 
   <article class="post">
-    <h2><a href="chvck.co.uk/posts/2013/Jan/18/photo-a-day-18th-jan/">Photo a day 18th Jan</a></h2>
-    <h3>Posted on 18 Jan 2013</h3>
+    <h2><a href="chvck.co.uk/posts/2013/Apr/20/jquery-hackday/">JQuery Hackday</a></h2>
+    <h3>Posted on 20 Apr 2013</h3>
         
-      <p>I was so determined not to take a snowy picture today but, well, that failed! This is overlooking the small close that we live in
-and was taken at about lunch time. There's a good few inches and I'm glad that I didn't bother driving into work today. Ben
-was due to come over for the weekend but has decided to postpone until the morning to assess the roads then. The Chilterns
-ride with Beeline Cycles has also been cancelled. Hopefully we'll get a short loop in locally at ssome point over the weekend.</p>
-<p><img alt="Snow" src="https://lh3.googleusercontent.com/-KX-L9gGtZzU/UPsHd374oBI/AAAAAAAABd0/gxsF-hnSUHQ/s640/IMG_20130118_121146.jpg" /></p>	
+      <p>Yesterday marked the <a href="http://events.jquery.org/2013/uk/">Jquery UK</a> conference 
+which was hosted by <a href="http://www.whiteoctober.co.uk/">White October</a> in Oxford.
+Unfortunately I didn't go to the conference but today they also hosted a hackday
+along with <a href="http://jsoxford.com/">JS Oxford</a> which I did make it to! The idea for the 
+hackday was to have remote control cars that we could control from our laptops, phones etc...
+but also control using javascript run under nodejs.</p>
+<p><img alt="The car" src="https://lh5.googleusercontent.com/-43up7VqMoro/UXQmzkJGetI/AAAAAAAACMA/YdxAlpSadaw/s640/IMG_20130420_114428.jpg" />
+<p class="caption">The car!</p></p>
+<p>I arrived at about 8.45 and by 9 was sat on a table with 2 others and starting to hack.
+I'd already managed to install something called <a href="https://github.com/chrisjameskirkham/libkoki">libkoki</a> which we used for some machine 
+vision stuff but unfortunately had the wrong version of node installed to build the node 
+bindings for it that the White October guys had written for us. 2 versions of node later
+and I had it working along with being able to run code on the car, pretty exciting stuff!</p>
+<p>I was on a team with 3 others - Sunil, Phil and Toby. We were using the Blackberry sponsored
+car for the day. There were no real restrictions on what
+we could do with the day and with the cars although there was mention of a race at the end
+of the day. As we all had the koki stuff working we decided that we'd try to navigate around 
+the race track using that, going from marker to marker. Libkoki is a library used in
+<a href="https://www.studentrobotics.org/">student robotics</a> competitions. The idea behind it is that
+there are a number of markers that the library can detect and extract some static and some
+dynamic information from using a live camera feed. The markers provide information such
+as which number in a series it is as well as distance from the camera, rotation etc....</p>
+<p><img alt="Koki marker" src="https://lh4.googleusercontent.com/-jTCkMUftkDY/UXQm_VoSD3I/AAAAAAAACMQ/t_zHFV6-t0Y/s640/IMG_20130420_155934.jpg" />
+<p class="caption">One of the koki markers</p></p>
+<p><img alt="The track" src="https://lh6.googleusercontent.com/-lf6sZbv3bCA/UXQnC1hCpJI/AAAAAAAACMY/voDDL5gGjVw/s640/IMG_20130420_155940.jpg" />
+<p class="caption">The track</p></p>
+<p>The koki markers on the inside of the track were even numbered ones and on the outside odd.
+We decided to use a pretty simple approach of just turning anti-clockwise when we detected and
+got close to an even marker, and the opposite with an odd marker. I had tried to write a bit of logic
+to avoid hitting walls by using the angle of the car to the marker to work out the distance
+to the wall that the marker was on. I have a feeling that the value that I was using from the marker information
+wasn't actually the angle that I thought it was and this approach was never going to work if we didn't
+have a marker in sight anyway! </p>
+<p>Now, in my masters I did quite a lot of work navigating a maze with a rover but for that
+I used sonar. Whilst the sonar that I used back then was quite noisy it was still
+remarkably easier than using a live camera feed! If your vehicle is sat in front of a wall
+that's 20cm away then that's pretty easy to tell with sonar, not so much with a camera. Whilst
+we did have koki at our disposal that only worked if a marker was in sight, which 20cm from a wall
+quite often is not the case. I was pretty shocked by just how hard dealing with no
+extra information such as that given by sonar was, certainly made it interesting.</p>
+<p>Anyway, over the day our approach slowly developed (and our car hit many, many walls - they were
+only made from cardboard, luckily) and by the end we were bouncing between markers and working
+round the track relatively well, I think that we even managed half the track at one point.
+By the end of the day there was only one other team left and they had used an approach
+of edge detection on the tops of the walls. Their car was quite good at navigating some bits
+but not so good at other sections. In the end there was a race but the cars were controlled by
+people on phones instead!</p>
+<p><img alt="Ready to race" src="https://lh3.googleusercontent.com/-ccsEq-JeHog/UXQnFYc9n7I/AAAAAAAACMg/4unBSqrpNC0/s640/IMG_20130420_174409.jpg" />
+<p class="caption">Ready to race</p></p>
+<p><img alt="Race is on" src="https://lh4.googleusercontent.com/-Gw_dWX68fqs/UXQnIGPDziI/AAAAAAAACMo/t5XYsXUyF-Q/s640/IMG_20130420_174533.jpg" />
+<p class="caption">The race is on</p></p>
+<p><img alt="Pile up" src="https://lh4.googleusercontent.com/-4CbEkkRq3Hc/UXQnLRPW5zI/AAAAAAAACMw/hgQ6DCOkkjk/s640/IMG_20130420_174549.jpg" />
+<p class="caption">That dent in the wall wasn't there before...</p></p>
+<p><img alt="Chicane" src="https://lh3.googleusercontent.com/-_7AM3DXWsuk/UXQnVG_CncI/AAAAAAAACM4/8YkZw01etMo/s640/IMG_20130420_174744.jpg" />
+<p class="caption">The chicane</p></p>
+<p>It was an excellent day and I had a lot of fun. If they ever put on another then I'll
+definitely try to be there. Big thanks to the guys who set it all up so that we could
+do what we did.</p>
+<p><img alt="Beer" src="https://lh5.googleusercontent.com/-06s1vCzv1XE/UXQm9Ip0NOI/AAAAAAAACMI/j4uguzksdnc/s640/IMG_20130420_155109.jpg" />
+<p class="caption">Can't go wrong with free beer</p></p>	
         <a href="http://twitter.com/share" class="twitter-share-button"
      data-count="horizontal" data-via="chvck">Tweet</a>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         
-      <h3 class="blogMeta">Posted in: <a href="chvck.co.uk/category/photo-a-day.html">Photo-a-Day</a>
+      <h3 class="blogMeta">Posted in: <a href="chvck.co.uk/category/development.html">Development</a>
         | Tags :
-                    <span><a href="chvck.co.uk/tag/photo-a-day.html">photo-a-day</a> / </span>
+                    <span><a href="chvck.co.uk/tag/dev.html">dev</a> / </span>
+                    <span><a href="chvck.co.uk/tag/hackday.html">hackday</a> / </span>
                </h3>
       
   </article>
@@ -119,7 +175,7 @@ ride with Beeline Cycles has also been cancelled. Hopefully we'll get a short lo
     <h2>Comments</h2>
     <div id="disqus_thread"></div>
       <script type="text/javascript">
-         var disqus_identifier = "posts/2013/Jan/18/photo-a-day-18th-jan/";
+         var disqus_identifier = "posts/2013/Apr/20/jquery-hackday/";
          (function () {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://chvck.disqus.com/embed.js';

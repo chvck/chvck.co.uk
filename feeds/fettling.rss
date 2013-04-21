@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="chvck.co.uk/" rel="alternate"></link><link href="chvck.co.uk/feeds/Fettling.atom.xml" rel="self"></link><id>chvck.co.uk/</id><updated>2012-04-19T00:00:00+01:00</updated><entry><title>Lyriks - travel reduction</title><link href="chvck.co.uk/posts/2012/Apr/19/lyriks-travel-reduction/" rel="alternate"></link><updated>2012-04-19T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2012-04-19:posts/2012/Apr/19/lyriks-travel-reduction/</id><summary type="html">&lt;p&gt;It recently occured to me that it might make my life a bit easier on xc rides if I
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>chvck.co.uk</title><link>chvck.co.uk/</link><description>Pointless, sometimes amusing and deeply, deeply uninteresting to 99.72998% of the population</description><atom:link href="chvck.co.uk/feeds/fettling.rss" rel="self"></atom:link><lastBuildDate>Thu, 19 Apr 2012 00:00:00 +0100</lastBuildDate><item><title>Lyriks - travel reduction</title><link>chvck.co.uk/posts/2012/Apr/19/lyriks-travel-reduction/</link><description>&lt;p&gt;It recently occured to me that it might make my life a bit easier on xc rides if I
 was to drop the travel on the Lyriks (solo air) a tad - giving me a lower front end for the
 steep stuff. The first step here was to consider the options available, two options
 presented themselves to me. 1 - convert to coil uTurn, 2 - use Rock Shox all travel
@@ -31,4 +31,4 @@ which showed me that I need to put the spacer above the bumper for the top pisto
 &lt;p&gt;&lt;img src="images/lyriks.png"&gt;&lt;/p&gt;
 &lt;p&gt;Job done I put the forks back together (spending ages pissing about with that circlip again) and took
 the chance to refresh all the oil and lube any seals. It's really quite a simple process
-to change the travel and I now have fully working, fantastic feeling 140mm Lyriks!&lt;/p&gt;</summary><category term="bikes"></category><category term="bike-maintenance"></category></entry></feed>
+to change the travel and I now have fully working, fantastic feeling 140mm Lyriks!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">chuck</dc:creator><pubDate>Thu, 19 Apr 2012 00:00:00 +0100</pubDate><guid>tag:chvck.co.uk,2012-04-19:posts/2012/Apr/19/lyriks-travel-reduction/</guid><category>bikes</category><category>bike-maintenance</category></item></channel></rss>

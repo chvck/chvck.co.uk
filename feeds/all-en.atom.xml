@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="http://chvck.co.uk/" rel="alternate"></link><link href="http://chvck.co.uk/feeds/all-en.atom.xml" rel="self"></link><id>http://chvck.co.uk/</id><updated>2013-04-20T00:00:00+01:00</updated><entry><title>JQuery Hackday</title><link href="http://chvck.co.uk/posts/2013/Apr/20/jquery-hackday/" rel="alternate"></link><updated>2013-04-20T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-04-20:posts/2013/Apr/20/jquery-hackday/</id><summary type="html">&lt;p&gt;Yesterday marked the &lt;a href="http://events.jquery.org/2013/uk/"&gt;Jquery UK&lt;/a&gt; conference 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>chvck.co.uk</title><link href="http://chvck.co.uk/" rel="alternate"></link><link href="http://chvck.co.uk/feeds/all-en.atom.xml" rel="self"></link><id>http://chvck.co.uk/</id><updated>2013-04-28T00:00:00+01:00</updated><entry><title>Prospect Big Bike Ride</title><link href="http://chvck.co.uk/posts/2013/Apr/28/prospect-big-bike-ride/" rel="alternate"></link><updated>2013-04-28T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-04-28:posts/2013/Apr/28/prospect-big-bike-ride/</id><summary type="html">&lt;p&gt;The Dyfi Enduro is now a week away today it's been ages since I last did a real big ride.
+Therefore, I set out to plan a ride for this weekend and came across the Prospect Hospice 
+Big Bike Ride by chance, a 50km ride over Swindon way. Ben came over on Saturday
+so we did a quick 25km ride round Boars Hill and also had a bit of a play on the 
+Dean Court dirt jumps - they're better than I been expecting. Good news!&lt;/p&gt;
+&lt;p&gt;On Sunday we headed over to Swindon and signed on for the 50km loop, turns out
+that we had about 25 minutes to spare before the event started so had loads of
+time! The start was staggered into small groups but we didn't have to wait long.
+The first few km were on the croft trail which, from what we rode, seemed like pretty
+good fun. It was long until we (us and the guy in front of us) caught up to the group 
+in front and had to go a bit slower but pretty soon we were on double track off the trail
+so could ride at our own pace.&lt;/p&gt;
+&lt;p&gt;Most of the ride was on double track with a few single track descents (and one climb) and a bit
+of road. We were pretty surprised by how hilly it was. There was even one road climb where, whilst
+we were going up it, I was the only person who stayed on the bike! It was really good fun and a nice
+day on the bikes. We were pushing quite hard to try to treat it as a bit of training for next weekend and
+it fit the bill pretty well! Unfortunately I did have a crash, about 100m from the finish line. There were two
+trees that we had to ride through and I found out the hard way that my bars didn't fit, oh well - no 
+harm done :). Bring on the dyfi!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://runkeeper.com/user/chvck/activity/173105396"&gt;Runkeeper log&lt;/a&gt;&lt;/p&gt;</summary><category term="bikes"></category><category term="riding"></category></entry><entry><title>JQuery Hackday</title><link href="http://chvck.co.uk/posts/2013/Apr/20/jquery-hackday/" rel="alternate"></link><updated>2013-04-20T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-04-20:posts/2013/Apr/20/jquery-hackday/</id><summary type="html">&lt;p&gt;Yesterday marked the &lt;a href="http://events.jquery.org/2013/uk/"&gt;Jquery UK&lt;/a&gt; conference 
 which was hosted by &lt;a href="http://www.whiteoctober.co.uk/"&gt;White October&lt;/a&gt; in Oxford.
 Unfortunately I didn't go to the conference but today they also hosted a hackday
 along with &lt;a href="http://jsoxford.com/"&gt;JS Oxford&lt;/a&gt; which I did make it to! The idea for the 

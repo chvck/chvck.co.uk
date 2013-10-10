@@ -7,7 +7,7 @@
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-  <title>Photo a day 18th Jan</title>
+  <title>Pelican Github Autopublish</title>
   <link href="http://chvck.co.uk/theme/css/reset.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="http://chvck.co.uk/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="http://chvck.co.uk/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -97,21 +97,42 @@
  
 
   <article class="post">
-    <h2><a href="http://chvck.co.uk/posts/2013/Jan/18/photo-a-day-18th-jan/">Photo a day 18th Jan</a></h2>
-    <h3>Posted on 18 Jan 2013</h3>
+    <h2><a href="http://chvck.co.uk/posts/2013/Oct/09/pelican-github-autopublish/">Pelican Github Autopublish</a></h2>
+    <h3>Posted on 09 Oct 2013</h3>
         
-      <p>I was so determined not to take a snowy picture today but, well, that failed! This is overlooking the small close that we live in
-and was taken at about lunch time. There's a good few inches and I'm glad that I didn't bother driving into work today. Ben
-was due to come over for the weekend but has decided to postpone until the morning to assess the roads then. The Chilterns
-ride with Beeline Cycles has also been cancelled. Hopefully we'll get a short loop in locally at ssome point over the weekend.</p>
-<p><img alt="Snow" src="https://lh3.googleusercontent.com/-KX-L9gGtZzU/UPsHd374oBI/AAAAAAAABd0/gxsF-hnSUHQ/s640/IMG_20130118_121146.jpg" /></p>	
+      <p>This isn't strictly development but could be handy for someone. </p>
+<p>This blog uses a piece of software called <a href="http://docs.getpelican.com/">Pelican</a>, if you hadn't
+guessed. Pelican is a static blog generator, this means that it takes a theme (some
+HTMl like templates and some css), blog posts (mine are written in <a href="http://daringfireball.net/projects/markdown/">markdown</a>)
+and some settings and it creates a static html output ready to be hosted somewhere.</p>
+<p>For the hosting I use <a href="http://pages.github.com/">Github pages</a>, mostly because I already
+use github and it means that hosting is free. I'm a huge fan of free. These two marry
+together quite nicely.</p>
+<p>To do the publish I use <a href="https://github.com/davisp/ghp-import">ghp-import</a> and just push to my
+gh-pages branch. <a href="http://docs.getpelican.com/en/3.3.0/tips.html#publishing-to-github">The pelican docs actually describe how to set this up</a>.
+I use the post-commit hook approach and it's brilliant. BUT I don't want to have to run this stuff everytime,
+I have to ssh into my server and then do a git add and commit. This is where my autopublish process comes in.</p>
+<p>The first step that I did was to move my blog post folder to dropbox and create a link within my blog folder to that.
+This means I can write posts anywhere so long as I can upload to dropbox and it'll be visible to pelican to do it's
+magic. </p>
+<p>The next step I thought I would do is just to add some form of watcher for git so that when content in the source
+folder changes it'd add and commit and hey presto the hook would do the rest. Git doesn't follow links. That's that one dead then.
+However, Pelican has a --autoreload option so that you can leave it running and it'll auto regenerate the output
+whenever it detects a change, OK so I'll use that. Next I changed my post-commit hook so that it'd only run ghp-import
+and do the push to gh-pages, not create the content. I downloaded <a href="https://github.com/nevik/gitwatch">Gitwatch</a> and ran it
+to look at my blog folder (not the source folder, the whole thing). Final step, I setup ssh-agent so that I wouldn't
+have to supply password each time git tried to do a push.</p>
+<p>This means that I now stick a file in my github folder, pelican picks that up and regenerates the output, gitwatch picks up
+the new output and does an add and a commit firing the post-commit hook. The hook runs ghp-import and pushes to gh-pages. Hey presto,
+my new post is on my blog!</p>	
   <a href="http://twitter.com/share" class="twitter-share-button"
      data-count="horizontal" data-via="chvck">Tweet</a>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         
-      <h3 class="blogMeta">Posted in: <a href="http://chvck.co.uk/category/photo-a-day.html">Photo-a-Day</a>
+      <h3 class="blogMeta">Posted in: <a href="http://chvck.co.uk/category/development.html">Development</a>
         | Tags :
-           <span><a href="http://chvck.co.uk/tag/photo-a-day.html">photo-a-day</a> / </span>
+           <span><a href="http://chvck.co.uk/tag/pelican.html">pelican</a> / </span>
+           <span><a href="http://chvck.co.uk/tag/dev.html">dev</a> / </span>
       </h3>
       
   </article>
@@ -121,7 +142,7 @@ ride with Beeline Cycles has also been cancelled. Hopefully we'll get a short lo
     <h2>Comments</h2>
     <div id="disqus_thread"></div>
       <script type="text/javascript">
-         var disqus_identifier = "posts/2013/Jan/18/photo-a-day-18th-jan/";
+         var disqus_identifier = "posts/2013/Oct/09/pelican-github-autopublish/";
          (function () {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://chvck.disqus.com/embed.js';

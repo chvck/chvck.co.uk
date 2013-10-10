@@ -42,7 +42,31 @@ really good feeling that is. The last 2 were what I've come to expect from Wales
 &lt;img alt="Waterfall" src="https://lh6.googleusercontent.com/-W1s5nuutbKU/UlWYNhHSzMI/AAAAAAAADlQ/nYhrbDZFRgo/s640/P1000400.JPG" /&gt;
 &lt;img alt="Yet more panorama" src="https://lh4.googleusercontent.com/-QHLZNx_Ic7A/UlWXFP9iQmI/AAAAAAAADk0/tM0u5E0ruyQ/s640/P1000401.JPG" /&gt;&lt;/p&gt;
 &lt;p&gt;I think that I'd go back and do either of them but I'd take the Marin over Penmachno. If you go and only have time to do one then don't do either!
-Instead, just do the final descents of both :)&lt;/p&gt;</summary><category term="riding"></category><category term="bikes"></category></entry><entry><title>Tipping chicks</title><link href="http://chvck.co.uk/posts/2013/Oct/08/tipping-chicks/" rel="alternate"></link><updated>2013-10-08T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-10-08:posts/2013/Oct/08/tipping-chicks/</id><summary type="html">&lt;p&gt;My Dad owns a chicken farm where he takes chicks from a couple of days old and grows them
+Instead, just do the final descents of both :)&lt;/p&gt;</summary><category term="riding"></category><category term="bikes"></category></entry><entry><title>Pelican Github Autopublish</title><link href="http://chvck.co.uk/posts/2013/Oct/09/pelican-github-autopublish/" rel="alternate"></link><updated>2013-10-09T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-10-09:posts/2013/Oct/09/pelican-github-autopublish/</id><summary type="html">&lt;p&gt;This isn't strictly development but could be handy for someone. &lt;/p&gt;
+&lt;p&gt;This blog uses a piece of software called &lt;a href="http://docs.getpelican.com/"&gt;Pelican&lt;/a&gt;, if you hadn't
+guessed. Pelican is a static blog generator, this means that it takes a theme (some
+HTMl like templates and some css), blog posts (mine are written in &lt;a href="http://daringfireball.net/projects/markdown/"&gt;markdown&lt;/a&gt;)
+and some settings and it creates a static html output ready to be hosted somewhere.&lt;/p&gt;
+&lt;p&gt;For the hosting I use &lt;a href="http://pages.github.com/"&gt;Github pages&lt;/a&gt;, mostly because I already
+use github and it means that hosting is free. I'm a huge fan of free. These two marry
+together quite nicely.&lt;/p&gt;
+&lt;p&gt;To do the publish I use &lt;a href="https://github.com/davisp/ghp-import"&gt;ghp-import&lt;/a&gt; and just push to my
+gh-pages branch. &lt;a href="http://docs.getpelican.com/en/3.3.0/tips.html#publishing-to-github"&gt;The pelican docs actually describe how to set this up&lt;/a&gt;.
+I use the post-commit hook approach and it's brilliant. BUT I don't want to have to run this stuff everytime,
+I have to ssh into my server and then do a git add and commit. This is where my autopublish process comes in.&lt;/p&gt;
+&lt;p&gt;The first step that I did was to move my blog post folder to dropbox and create a link within my blog folder to that.
+This means I can write posts anywhere so long as I can upload to dropbox and it'll be visible to pelican to do it's
+magic. &lt;/p&gt;
+&lt;p&gt;The next step I thought I would do is just to add some form of watcher for git so that when content in the source
+folder changes it'd add and commit and hey presto the hook would do the rest. Git doesn't follow links. That's that one dead then.
+However, Pelican has a --autoreload option so that you can leave it running and it'll auto regenerate the output
+whenever it detects a change, OK so I'll use that. Next I changed my post-commit hook so that it'd only run ghp-import
+and do the push to gh-pages, not create the content. I downloaded &lt;a href="https://github.com/nevik/gitwatch"&gt;Gitwatch&lt;/a&gt; and ran it
+to look at my blog folder (not the source folder, the whole thing). Final step, I setup ssh-agent so that I wouldn't
+have to supply password each time git tried to do a push.&lt;/p&gt;
+&lt;p&gt;This means that I now stick a file in my github folder, pelican picks that up and regenerates the output, gitwatch picks up
+the new output and does an add and a commit firing the post-commit hook. The hook runs ghp-import and pushes to gh-pages. Hey presto,
+my new post is on my blog!&lt;/p&gt;</summary><category term="pelican"></category><category term="dev"></category></entry><entry><title>Tipping chicks</title><link href="http://chvck.co.uk/posts/2013/Oct/08/tipping-chicks/" rel="alternate"></link><updated>2013-10-08T00:00:00+01:00</updated><author><name>chuck</name></author><id>tag:chvck.co.uk,2013-10-08:posts/2013/Oct/08/tipping-chicks/</id><summary type="html">&lt;p&gt;My Dad owns a chicken farm where he takes chicks from a couple of days old and grows them
 until they're about ready to start laying eggs. At the point where they're old enough
 to lay they get taken off to another farm and he then gets a new batch of chicks. As I'm currently
 on holiday and on the farm I got roped into "tipping chicks" today. &lt;/p&gt;

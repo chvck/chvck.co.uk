@@ -7,7 +7,7 @@
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-  <title>Pelican Github Autopublish</title>
+  <title>Playing in the Dyfi</title>
   <link href="http://chvck.co.uk/theme/css/reset.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="http://chvck.co.uk/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="http://chvck.co.uk/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -97,42 +97,60 @@
  
 
   <article class="post">
-    <h2><a href="http://chvck.co.uk/posts/2013/Oct/09/pelican-github-autopublish/">Pelican Github Autopublish</a></h2>
-    <h3>Posted on 09 Oct 2013</h3>
+    <h2><a href="http://chvck.co.uk/posts/2013/Oct/11/playing-in-the-dyfi/">Playing in the Dyfi</a></h2>
+    <h3>Posted on 11 Oct 2013</h3>
         
-      <p>This isn't strictly development but could be handy for someone. </p>
-<p>This blog uses a piece of software called <a href="http://docs.getpelican.com/">Pelican</a>, if you hadn't
-guessed. Pelican is a static blog generator, this means that it takes a theme (some
-HTMl like templates and some css), blog posts (mine are written in <a href="http://daringfireball.net/projects/markdown/">markdown</a>)
-and some settings and it creates a static html output ready to be hosted somewhere.</p>
-<p>For the hosting I use <a href="http://pages.github.com/">Github pages</a>, mostly because I already
-use github and it means that hosting is free. I'm a huge fan of free. These two marry
-together quite nicely.</p>
-<p>To do the publish I use <a href="https://github.com/davisp/ghp-import">ghp-import</a> and just push to my
-gh-pages branch. <a href="http://docs.getpelican.com/en/3.3.0/tips.html#publishing-to-github">The pelican docs actually describe how to set this up</a>.
-I use the post-commit hook approach and it's brilliant. BUT I don't want to have to run this stuff everytime,
-I have to ssh into my server and then do a git add and commit. This is where my autopublish process comes in.</p>
-<p>The first step that I did was to move my blog post folder to dropbox and create a link within my blog folder to that.
-This means I can write posts anywhere so long as I can upload to dropbox and it'll be visible to pelican to do it's
-magic. </p>
-<p>The next step I thought I would do is just to add some form of watcher for git so that when content in the source
-folder changes it'd add and commit and hey presto the hook would do the rest. Git doesn't follow links. That's that one dead then.
-However, Pelican has a --autoreload option so that you can leave it running and it'll auto regenerate the output
-whenever it detects a change, OK so I'll use that. Next I changed my post-commit hook so that it'd only run ghp-import
-and do the push to gh-pages, not create the content. I downloaded <a href="https://github.com/nevik/gitwatch">Gitwatch</a> and ran it
-to look at my blog folder (not the source folder, the whole thing). Final step, I setup ssh-agent so that I wouldn't
-have to supply password each time git tried to do a push.</p>
-<p>This means that I now stick a file in my github folder, pelican picks that up and regenerates the output, gitwatch picks up
-the new output and does an add and a commit firing the post-commit hook. The hook runs ghp-import and pushes to gh-pages. Hey presto,
-my new post is on my blog!</p>	
+      <p>The Dyfi forest is always a highlight to any of my weeks or weekends. The riding is top notch.
+I designed a route that took in every (very nearly anyway) descent that I knew on the Corris
+side of the forest, including a bonus descent that I didn't know. We started off parking
+just below the climachx car park (it was closed) and span our way up toward Elephant. On the way
+up I spied footpath which I had thought had been logged so I decided that we'd throw this in as a bonus too.</p>
+<p>The last time that I did footpath was quite a long time ago now, it was a pretty wide, quite muddy descent. Pretty
+average steepness for the dyfi. It's now a narrow, rocky descent but none-the-less still rather good. It is a bit of 
+a short one though. Next, spin back up to Elephant! </p>
+<p><img alt="Footpath" src="https://lh6.googleusercontent.com/-G5-Et8cD0AY/UlkVjLccBBI/AAAAAAAADn0/T1AJShHwAlU/s640/P1000420.JPG" />
+<img alt="Elephant" src="https://lh5.googleusercontent.com/-ziPSnPAuNPg/UlkVmLpz2hI/AAAAAAAADoE/WGciKjIZaHM/s640/P1000421.JPG" /></p>
+<p>Always a classic, starts out with a fairly long flat out as you dare blast down a rut before hitting
+a big bermed corner after which the trails unruts a bit and gets a bit rougher with a few small
+drops. We skipped the new Gravity Enduro but that they recently dug and popped out of the fireroad.
+We span along to the new bottom of Elephant (built for the enduro). This bit of trail is really, really
+awesome. They've added a descent that the dyfi really needed IMO. It's almost all dirt, unlike all of the 
+descents which are very rocky. After the enduro the descent is now very rutty but that makes it a bit like
+riding on rails! I had to dab once going round a corner where my tyre scraped the inside of the rut but managed
+to clean the rest including the pretty steep and slick bottom section. </p>
+<p><img alt="Very bottom of Elephant" src="https://lh6.googleusercontent.com/-cNoshdUdxjc/UlkW80OtdnI/AAAAAAAADoQ/OTtGQRbVZ-8/s640/P1000423.JPG" /></p>
+<p>Next it was back up to the top of this bit to tackle Builth which was riding the same as it has done for years. Fast,
+rocky and pretty wild! </p>
+<p><img alt="Builth" src="https://lh4.googleusercontent.com/-zOl3VbXX_8Y/UlkXBy53_KI/AAAAAAAADoY/pBYxxXn4KBk/s640/P1000425.JPG" /></p>
+<p>We span on up to the top of Dicko's which, again, is a Dyfi classic. With a mixture of rocks,
+mud and (since the gravity enduro) a bit of loam. As always, it was errr fast, rocky and pretty wild. Back up the climb
+past Builth and on Rocky Horror 1. I'd only done this once before and last time it was overgrown with brambles so I was prepared to
+have to do some clearing, only had to clear 1 bramble! The rest of the run was clean. It's steep and very, very rocky down this one.
+A few interesting bits where line choice matters quite a bit but yet another cracking descent.</p>
+<p><img alt="Dickos" src="https://lh5.googleusercontent.com/-YgasPQyudYQ/UlkYd5UQDEI/AAAAAAAADo8/ZPDdTRdxpVI/s640/P1000428.JPG" />
+<img alt="Rocky Horror" src="https://lh3.googleusercontent.com/-tGCjA2U_ksA/UlkZrmifI2I/AAAAAAAADpQ/Zk8FyQwh82U/s640/P1000429.JPG" /></p>
+<p>Back up the climb past builth yet again and we did the short Dyfi Warm Up enduro descent. It's a bit of fun, not too steep but rocky with
+wheel grabbing holes if you pick your line wrong. We span back up past builth again (for the last time!) and cracked on to Nemesis. We found it
+quite a way up a technical singletrack climb. I hadn't done this before. Wow! It's great. It started out a bit twisty and very steep before developing
+out in a bit more of a flatout and then getting steep and tight again. Mixture of rocks and mud this time, mostly rocks! It dropped us out onto
+a fireroad a bit in the middle of nowhere so it was a bit of a trek back up to Tony. Despite this, Nemesis is getting added to permanent list of 
+Dyfi trails that need riding.</p>
+<p><img alt="Nemesis" src="https://lh3.googleusercontent.com/-3P3i6mXMyWE/UlkZqq6LhII/AAAAAAAADpM/k57eVV6aFuE/s640/P1000431.JPG" />
+<img alt="Nemsis bottom" src="https://lh5.googleusercontent.com/-EgLNTEs6ysU/UlkbHjdBUrI/AAAAAAAADpk/d1z2KIabhdo/s640/P1000434.JPG" /></p>
+<p>We finished up on Tony the Tiger, the climachx final descent. Once again very rocky but also very long. Starts out in the woods and then opens up to 
+where they've been logging before dropping back into the trees traversing back and forth along the hill before a load of tight(ish) switchbacks leading to the bottom.
+A nice way to finish out a ride!</p>
+<p><img alt="View near rocky horror" src="https://lh5.googleusercontent.com/-8nzXAx6HPiY/UlkbTcKSl0I/AAAAAAAADp0/iwLWn08Zxcw/s640/P1000435.JPG" />
+<img alt="View from tony" src="https://lh4.googleusercontent.com/-JFIw0tlmA0o/UlkcI68XqBI/AAAAAAAADqE/gV0mBfGnsYM/s640/P1000437.JPG" /></p>
+<p>Man, I love the Dyfi.</p>	
   <a href="http://twitter.com/share" class="twitter-share-button"
      data-count="horizontal" data-via="chvck">Tweet</a>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         
-      <h3 class="blogMeta">Posted in: <a href="http://chvck.co.uk/category/development.html">Development</a>
+      <h3 class="blogMeta">Posted in: <a href="http://chvck.co.uk/category/riding.html">Riding</a>
         | Tags :
-           <span><a href="http://chvck.co.uk/tag/pelican.html">pelican</a> / </span>
-           <span><a href="http://chvck.co.uk/tag/dev.html">dev</a> / </span>
+           <span><a href="http://chvck.co.uk/tag/riding.html">riding</a> / </span>
+           <span><a href="http://chvck.co.uk/tag/bikes.html">bikes</a> / </span>
       </h3>
       
   </article>
@@ -142,7 +160,7 @@ my new post is on my blog!</p>
     <h2>Comments</h2>
     <div id="disqus_thread"></div>
       <script type="text/javascript">
-         var disqus_identifier = "posts/2013/Oct/09/pelican-github-autopublish/";
+         var disqus_identifier = "posts/2013/Oct/11/playing-in-the-dyfi/";
          (function () {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://chvck.disqus.com/embed.js';

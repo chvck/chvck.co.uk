@@ -5,7 +5,7 @@
 body {
     width: 85%;
     text-align: left;
-    font-family: "Times New Roman"; 
+    font-family: "Helvetica";
     margin-left: auto;
     margin-right: auto;
     color: #333333;
@@ -19,7 +19,7 @@ blockquote {
 
 
 img {
-    max-width: 50%;
+    max-width: 80%;
     border: 1px solid #333333;
     height: auto;
     display: block;
@@ -34,10 +34,6 @@ img.summary {
 }
 
 @media (max-width: 1280px) {
-    .img {
-        max-width: 100%;
-    }
-	
 	img.summary {
         max-width: 30%;
     }
@@ -45,7 +41,7 @@ img.summary {
 
 ul,
 ol {
-    margin-left: 20px;
+    margin-left: 4em;
     line-height: 1.6em;
 }
 
@@ -56,8 +52,7 @@ ul.no-points {
 /* *** Layout *** */
 
 header {
-    display: inline;
-    margin-bottom: 0.2em;
+    margin-bottom: 1em;
 } 
 
 header h3 {
@@ -66,33 +61,30 @@ header h3 {
 
 header h1 {
     font-size: 4em;
-    font-weight: bold;
 }
-
-footer { 
-    font-size: 12px;
-    height: 70px;
-    padding: 0 10px 0 20px;
-} 
 
 /* *** Top Menu Styles *** */
 /* *** Blog Styles *** */
 
-article {
-    padding: 20px 0 20px 0;
+article.summary {
+    margin: 1.5em 0 1.5em 0;
 }
 
 article.post {
     padding-top: 0px;
 }
 
-article.post img {
-    margin-top: 10px;
-    margin-bottom: 0px;
+article.post .article-heading h2,
+article.post .article-heading h3 {
+	display: inline;
 }
 
-article.summary {
-    margin-top: 15px;
+article.post img {
+    margin-top: 1em;
+}
+
+article.post .article-heading {
+	margin-bottom: 0.35em;
 }
 
 article.summary:after { 
@@ -101,8 +93,12 @@ article.summary:after {
     clear: both; 
 }
 
-#article-summary img {
+.article-summary img {
     display: none;
+}
+
+.blogMeta {
+	margin-top: 1.5em;
 }
 
 .caption {
@@ -111,108 +107,45 @@ article.summary:after {
     text-align: center;
 }
 
+.tag-cloud {
+	margin-top: 1.5em;
+}
+
 .tag-cloud ul {
     list-style-type: none;
 }
 
 .tag-cloud ul li {
     display: inline;
-    margin-right: 5px;
+    margin-right: 0.5em;
 }
 
-.tag {
-    /* Some standard .tag settings: starting point */
-    float:right;
-    text-decoration:none;
-    padding: 2px 4px;
-
-    /* Rotation transformation */
-    -webkit-transform: rotate(-2deg);
-    -moz-transform: rotate(-2deg);
-    -o-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-
-    /* Transition between this and :hover state */
-    -webkit-transition: -webkit-transform 0.1s ease-in;
-    -moz-transition: -moz-transform 0.1s ease-in;
-    -o-transition: -o-transform 0.1s ease-in;
-    transition: transform 0.1s ease-in; 
-}
-
-.tag:hover {
-    color:#fff;
-    z-index:10000;
-
-    -webkit-transform: rotate(3deg) scale(1.2);
-    -moz-transform: rotate(3deg) scale(1.2);
-    -o-transform: rotate(3deg) scale(1.2);
-    transform: rotate(3deg) scale(1.2);
-}
-
-
-.tag:nth-child(2n) {
-    -webkit-transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
-    transform: rotate(2deg);
-}
-
-.tag:nth-child(4n) {
-    -webkit-transform: rotate(-8deg);
-    -moz-transform: rotate(-8deg);
-    -o-transform: rotate(-8deg);
-    transform: rotate(-8deg);
-}
-
-.tag:nth-child(5n) {
-    -webkit-transform: rotate(-3deg);
-    -moz-transform: rotate(-3deg);
-    -o-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-}
-
-.tag:nth-child(2n):hover {
-    -webkit-transform: rotate(-3deg) scale(1.2);
-    -moz-transform: rotate(-3deg) scale(1.2);
-    -o-transform: rotate(-3deg) scale(1.2);
-    transform: rotate(-3deg) scale(1.2);
-}
-
-.tag:nth-child(4n):hover {
-    -webkit-transform: rotate(3deg) scale(1.2);
-    -moz-transform: rotate(3deg) scale(1.2);
-    -o-transform: rotate(3deg) scale(1.2);
-    transform: rotate(3deg) scale(1.2);
-}
-
-.tag:nth-child(5n):hover {
-    -webkit-transform: rotate(2deg) scale(1.2);
-    -moz-transform: rotate(2deg) scale(1.2);
-    -o-transform: rotate(2deg) scale(1.2);
-    transform: rotate(2deg) scale(1.2);
+#pagination {
+	margin: 1.5em 0 0 0;
 }
 
 
 /* *** Footer Styles *** */
 
+footer { 
+    margin: 3em 0 1em 0;
+    font-size: 0.8em;
+} 
+
 footer p {
-    padding: 30px 0 0 0;
     text-align: center;
 }
 
 .floatR {
     float: right;
-    margin-left: 8px;
 }
 
 .floatL { 
     float: left;
-    margin-right: 8px;
 }
 
 .clearfloat {
     clear:both;
     height:0;
-    font-size: 1px;
     line-height: 0px;
 }

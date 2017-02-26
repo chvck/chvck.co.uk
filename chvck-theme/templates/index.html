@@ -5,12 +5,12 @@
     {% for article in articles_page.object_list %}     
       <article class="summary">
 		  {% if  article.featured_image %}
-			<img src="{{ article.featured_image }}" class="summary">
+			<a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.featured_image }}" class="summary"></a>
 		  {% endif %}
 
           <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
           <h3>{{ article.locale_date }}</h3>
-          <div id="article-summary">
+          <div class="article-summary">
             {{ article.summary }}
           </div>
       </article>
@@ -18,11 +18,12 @@
   {% else %}
 
   {% endif %}
-  <hr />
+  <div id="pagination">
    {% include "pagination.html" %}
-  <hr />
+  </div>
 
 	<div class="tag-cloud" id="tag-cloud">
+		<h3>Tags</h3>
 		<ul>
 			{% for tag in tags %}
 			<li>

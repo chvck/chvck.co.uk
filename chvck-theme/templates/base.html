@@ -3,15 +3,41 @@
 
 <head>
 
+  <meta name="author" content="chvck">
   <meta name="description" content="Pointless, sometimes amusing and deeply uninteresting to 99.7% of the population. A site about random occurances and things that I spend my time doing. Posts ranging from multiple sclerosis to food to mountain biking, a lot of mountain biking." />
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
   <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Slab">
   {% if FEED_RSS %}
     <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
+  
+    <!-- OpenGraph tags -->
+    <meta property="og:site_name" content="chvck.co.uk">
+
+    <meta property="og:image" content="http://www.gravatar.com/avatar/3c7055a61f3e23511c27771d70897053?s=256&d=mm&r=g">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="chvck.co.uk">
+    <meta property="og:url" content="http://chvck.co.uk">
+    <meta property="og:description" content="Pointless, sometimes amusing and deeply uninteresting to 99.7% of the population. A site about random occurances and things that I spend my time doing. Posts ranging from multiple sclerosis to food to mountain biking, a lot of mountain biking.">
+
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@https://twitter.com/chvck">
+
+    <meta name="twitter:creator" content="@https://twitter.com/chvck">
+    <meta name="twitter:image:src" content="http://www.gravatar.com/avatar/3c7055a61f3e23511c27771d70897053?s=256&d=mm&r=g">
+    <meta name="twitter:domain" content="http://chvck.co.uk">
     
   <!--[if IE]>
     <style type="text/css"> 

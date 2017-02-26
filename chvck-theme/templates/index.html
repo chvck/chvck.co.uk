@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %} 
+  {% if articles %}
+    {% for article in articles_page.object_list %}     
+      <article class="summary">
+		  {% if  article.featured_image %}
+			<img src="{{ article.featured_image }}" class="summary">
+		  {% endif %}
+
+          <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+          <h3>{{ article.locale_date }}</h3>
+          <div id="article-summary">
+            {{ article.summary }}
+          </div>
+      </article>
+    {% endfor %}
+  {% else %}
+
+  {% endif %}
+  <hr />
+   {% include "pagination.html" %}
+  <hr />
+
+	<div class="tag-cloud" id="tag-cloud">
+		<ul>
+			{% for tag in tags %}
+			<li>
+				<a href={{ SITEURL }}/tag/{{ tag.0 }}.html>{{ tag.0 }}</a>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <article>
+    <h2><a href="{{ SITEURL }}/categories.html">Categories</a></h2>
+    <ul class="no-points">
+      {% for category, articles in categories %}
+          <li><h3><a href={{ SITEURL }}/category/{{ category|lower }}.html>{{ category }}</a></h3></li>
+            <ul class="no-points">
+              {% for article in articles %}
+                <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.locale_date }} - {{ article.title }}</a></li>
+              {% endfor %}
+            </ul>
+      {% endfor %}
+    </ul>
+  </article>
+          
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <article>
+    <h2><a href="{{ SITEURL }}/tags.html">Tags</a></h2>
+    <ul class="no-points">
+      {% for tag, articles in tags %}
+        <li><h3><a href={{ SITEURL }}/tag/{{ tag }}.html>{{ tag }} ({{ articles|count }})</a></h3></li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endblock %}

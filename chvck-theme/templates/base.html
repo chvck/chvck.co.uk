@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta name="description" content="Pointless, sometimes amusing and deeply uninteresting to 99.7% of the population. A site about random occurances and things that I spend my time doing. Posts ranging from multiple sclerosis to food to mountain biking, a lot of mountain biking." />
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+  <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  {% if FEED_RSS %}
+    <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+    
+  <!--[if IE]>
+    <style type="text/css"> 
+    . twoColFixRtHdr #mainContent { zoom: 1; }
+    </style>
+  <![endif]-->
+
+</head>
+
+<body>  
+    <header>
+      <h1><a href="/">{{ SITENAME }}</a></h1>
+      <h3>
+        <a href="https://twitter.com/chvck">Twitter</a> |
+        <a href="http://dirty-casuals.co.uk">Dirty Casuals</a>
+      </h3>
+    </header>
+
+    <nav>
+    </nav>
+   
+    <div id="mainContent">
+      
+      {% block content_title %}
+      {% endblock %}
+      
+      {% block content %}
+      {% endblock %}
+    
+    </div><!-- end #mainContent -->
+  
+  <div class="clearfloat"></div>
+  
+    <footer>
+      <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+    </footer><!-- end #footer -->
+</body>
+</html>

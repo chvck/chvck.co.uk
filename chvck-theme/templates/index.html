@@ -4,8 +4,8 @@
   {% if articles %}
     {% for article in articles_page.object_list %}     
       <article class="summary">
-		  {% if  article.featured_image %}
-			<a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.featured_image }}" class="summary"></a>
+		  {% if  article.thumbnail %}
+			<a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.thumbnail }}" class="summary"></a>
 		  {% endif %}
 
           <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>

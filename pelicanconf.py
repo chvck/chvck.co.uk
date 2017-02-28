@@ -21,10 +21,15 @@ STATIC_PATHS = ['images']
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 PLUGIN_PATHS = ["plugins", "plugins"]
-PLUGINS = ['representative_image']
+PLUGINS = ['thumbnailer']
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = False
-
+THUMBNAIL_KEEP_NAME = True
+IMAGE_PATH = 'images'
+THUMBNAIL_KEEP_TREE = True
+THUMBNAIL_SIZES = {
+    'thumbnail_wide': '350x?',
+}

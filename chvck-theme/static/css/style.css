@@ -31,6 +31,7 @@ img.summary {
     float: left;
     margin-right: 1em;
     margin-top: 0;
+	max-height: 12em;
 }
 
 @media (max-width: 1280px) {
@@ -55,8 +56,9 @@ header {
     margin-bottom: 1em;
 } 
 
-header h3 {
-	display: inline
+header p {
+	display: inline;
+	font-size: 1.17em;
 }
 
 header h1 {
@@ -91,6 +93,10 @@ article.summary:after {
     content: ""; 
     display: table; 
     clear: both; 
+}
+
+article.summary h3 {
+	font-size: 1.5em;
 }
 
 .article-summary img {

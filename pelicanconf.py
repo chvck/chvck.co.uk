@@ -21,7 +21,7 @@ STATIC_PATHS = ['images']
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 PLUGIN_PATHS = ["plugins", "plugins"]
-PLUGINS = ['thumbnailer']
+PLUGINS = ['thumbnailer', "sitemap"]
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
@@ -32,4 +32,19 @@ IMAGE_PATH = 'images'
 THUMBNAIL_KEEP_TREE = True
 THUMBNAIL_SIZES = {
     'thumbnail_wide': '350x?',
+}
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'daily',
+        'indexes': 'daily',
+        'pages': 'daily'
+    },
+    'exclude': ['images/']
 }
